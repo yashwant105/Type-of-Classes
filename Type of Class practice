@@ -1,0 +1,105 @@
+Q 1) What is String in apex class ?
+Ans) A collections of carachters is challed String.
+ex : India ('I', 'N', 'D', 'I', 'A')
+In apex class the string is case sensitive.
+ex : INDIA, india
+
+Note : Go to debug, select anonoumous window. 
+
+Demo of all types are given below :
+Syntax : String
+String St1 = 'Hello World';
+System.debug (St1);
+Output : Hello World
+
+Q 2) How to use capitilized function in string ?
+Syntax : 
+String St1 = 'hello world';
+System.debug (St1.capitalize());
+Output : Hello World
+
+Q 3) How to use trim function in string ?
+ANS ) String St1 = '        hello world     ';
+System.debug (St1.trim());
+Output : hello world
+--------------------------------------------------------------------------------------
+
+Q 4) What is list ?
+ANS ) A collection of multiple elements are called list
+ex : List school=books, bags, classroom, students etc
+List is also called an array and list also starts with index no. 0, 1, infinite
+ex : List integer 
+A) Integer Syntax :
+List <integer> mylist = new list <integer> {20, 33, 34, 23, 26, 57};
+System.debug('Elements of my list = +mylist');
+System.debug('Third element of my list =' +mylist [2]);
+Output : Third element of my list =34
+How to define 0 is considered 20 and 1 is considered as 33 and 2 is considered as 34 ?
+
+Q 5) List with String syntax 
+ANS ) 
+List <string> mylist = new list <string> {'Pune', 'Mumbai', 'Banglore', 'Nagpur', 'Delhi'};
+System.debug('Elements of my list = +mylist');
+System.debug('Third element of my list =' +mylist [2]);
+Output : Third element of my list =Banglore
+
+Q 6) What is list of method in apex class ?
+ANS ) A method which can be apply over list
+Syntax : add method
+List <string> mylist = new list <string> {'Kunal', 'Yashwant'};
+mylist.add('Sarika');
+System.debug(mylist);
+Output : Kunal, Yashwant, Sarika
+
+Q 7) How to add an element particular position not in the end ? Index pass first
+ANS ) 
+List <string> mylist = new list <string> {'Kunal', 'Yashwant'};
+mylist.add(1,'Sarika');
+System.debug(mylist);
+Output : Kunal, Sarika, Yashwant
+
+Q 8) How to add "all" method in list ?
+ANS ) Take ex of Indian cricketers
+List <string> mylist1 = new list <string> {'Sachin', 'Rohit', 'Dhoni', 'Rahul'};
+List <string> mylist2 = new list <string> {'Virat', 'Gill', 'Sky', 'Rishab'};
+mylist1.addALL(mylist2);
+System.debug(mylist1);
+Output : 'Sachin', 'Rohit', 'Dhoni', 'Rahul' Virat', 'Gill', 'Sky', 'Rishab'
+
+Q 9) Can we mix with integer and string in the list method ?
+ANS ) milk and lemon can become a friend
+List <string> mylist1 = new list <string> {'Sachin', 'Rohit', 'Dhoni', 'Rahul'};
+List <integer> mylist2 = new list <integer> {1, 2, 3, 4};
+mylist1.addALL(mylist2);
+System.debug(mylist1);
+Output : Method does not exist or incorrect signature: void addALL(List<Integer>) from the type List<String>
+
+Q 10) How to clear the method in the list or remove the method ?
+ANS )
+String St1 = 'hello world';
+St1.clear();
+System.debug (St1);
+Output : Method does not exist or incorrect signature: void clear() from the type String
+
+Q 11) How to make clone or duplicate method ?
+ANS ) 
+List <string> mylist1 = new list <string> {'Sachin', 'Rohit', 'Dhoni', 'Rahul'};
+List <string> mylist123 = new list <string> ();
+mylist123 = mylist1.clone();
+System.debug(mylist123);
+Output : Sachin, Rohit, Dhoni, Rahul
+----------------------------------------------------------------------------------------------------------------------
+
+Q 12 ) What is Set ?
+ANS ) It is also like collection of list but deplicates not allowed
+ex : set = (apple, banana, chery, mango, chery, mango, apple)
+Note : duplicate items are not allowed in set
+2) set is unorderd list
+ex : 
+Syntax :
+Set <string> set1 = new set <string> {'Sachin', 'Rohit', 'Dhoni', 'Rahul'};
+Syatem.debug('Elements of my set are' = +set1);
+
+
+
+ 
