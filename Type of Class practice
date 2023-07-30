@@ -99,7 +99,88 @@ ex :
 Syntax :
 Set <string> set1 = new set <string> {'Sachin', 'Rohit', 'Dhoni', 'Rahul'};
 Syatem.debug('Elements of my set are' = +set1);
+----------------------------------------------------------------------------------------------------------------------
 
+Q 13) What is Map ?
+ANS ) Contains methods for the Map collection type.
+Map contains of keys and values and value can be access by keys.
+Note :
+1.Map keys and values can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
+2.Uniqueness of map keys of user-defined types is determined by the equals and hashCode methods, which you provide in your classes. Uniqueness of keys of all other non-primitive types, such as sObject keys, is determined by comparing the objects’ field values.
+3.Map keys of type String are case-sensitive. Two keys that differ only by the case are considered unique and have corresponding distinct Map entries. Subsequently, the Map methods, including put, get, containsKey, and remove treat these keys as distinct.
+Syntax :
+Map<Integer, String> m1 = new Map<Integer, String>();
+m1.put(1, 'First item');
+m1.put(2, 'Second item');
 
+Q 14) What is Constructors ?
+ANS )
+The following are constructors for Map :
+1. Map<T1,T2>()
+EX : 
+Map<Integer, String> m1 = new Map<Integer, String>();
+m1.put(1, 'First item');
+m1.put(2, 'Second item');
+Creates a new instance of the Map class. T1 is the data type of the keys and T2 is the data type of the values.
 
- 
+2. Map<T1,T2>(mapToCopy)
+EX :
+Map<Integer, String> m1 = new Map<Integer, String>();
+m1.put(1, 'First item');
+m1.put(2, 'Second item');
+Map<Integer, String> m2 = new Map<Integer, String>(m1);
+// The map elements of m2 are copied from m1
+System.debug(m2);
+Creates a new instance of the Map class and initializes it by copying the entries from the specified map. T1 is the data type of the keys and T2 is the data type of the values.
+
+3. Map<ID,sObject>(recordList)
+EX :
+List<Account> ls = [select Id,Name from Account];
+Map<Id, Account> m = new Map<Id, Account>(ls);
+Creates a new instance of the Map class and populates it with the passed-in list of sObject records. The keys are populated with the sObject IDs and the values are the sObjects.
+
+Q 15) What is Map Methods ?
+ANS ) The method that can applied on Map in Apex class are called methods
+EX :
+Clear, clone, contains etc.
+
+Q 16) What is the syntax of clear method in map ?
+ANS ) Syntax :
+map <integer, string> mymap = new map <integer, string> ();
+mymap.put(1,'abc');
+mymap.put(2,'xyz');
+System.debug(mymap);
+mymap.clear();
+System.debug('Map after clear method' +mymap);
+
+Q 17) How to do clone method in Map class ?
+ANS ) 
+map<integer ,string>mymap = new map<integer ,string>();
+mymap.put(1,'abc');
+mymap.put(2,'xyz');
+map<integer ,string>newmap = new map<integer ,string>();
+newmap =mymap.clone();
+System.debug('my map is cloned'+ newmap);
+
+Q 18) What is containskey in Map method ?
+ANS ) 
+It will come True or False 
+EX :
+map<integer ,string>mymap = new map<integer ,string>();
+mymap.put(1,'abc');
+mymap.put(2,'xyz');
+System.debug(mymap);
+System.debug(mymap.containskey(2));
+Output : true
+
+Q 19) How to get Containskey in Map method false ?
+ANS )
+Syntax :
+map<integer ,string>mymap = new map<integer ,string>();
+mymap.put(1,'abc');
+mymap.put(2,'xyz');
+mymap.put(3,'ijk');
+System.debug(mymap);
+System.debug(mymap.containskey(4));
+Output : false
+
