@@ -98,10 +98,32 @@ Note : duplicate items are not allowed in set
 ex : 
 Syntax :
 Set <string> set1 = new set <string> {'Sachin', 'Rohit', 'Dhoni', 'Rahul'};
-Syatem.debug('Elements of my set are' = +set1);
+System.debug('Elements of my set are' = +set1);
+
+
+Q 13 ) How to add on set method ? 
+ANS ) 
+Set <string> set = new set <string> {'abc', 'efg', 'xyz'} ;
+Set1 <string> set1 = new set <string> {'Yashwant', 'Kunal', 'Sarika'} ;
+Set.addAll(set1);
+System.debug('Elements of my set are =' +set);
+
+Q 14) How to clear or remove the Set method ?
+ANS ) 
+Set <string> set = new set <string> {'abc', 'efg', 'xyz'} ;
+Set1 <string> set1 = new set <string> {'Yashwant', 'Kunal', 'Sarika'} ;
+Set.clear(set1);
+System.debug('Elements of my set are =' +set);
+
+Q 15) How to clone of the Set method ?
+ANS )
+Set <string> set = new set <string> {'abc', 'efg', 'xyz'} ;
+Set1 <string> set1 = new set <string> {'Yashwant', 'Kunal', 'Sarika'} ;
+set=set1.clone();
+System.debug('Elements of my set are =' +set);
 ----------------------------------------------------------------------------------------------------------------------
 
-Q 13) What is Map ?
+Q 16) What is Map ?
 ANS ) Contains methods for the Map collection type.
 Map contains of keys and values and value can be access by keys.
 Note :
@@ -113,7 +135,7 @@ Map<Integer, String> m1 = new Map<Integer, String>();
 m1.put(1, 'First item');
 m1.put(2, 'Second item');
 
-Q 14) What is Constructors ?
+Q 17) What is Constructors ?
 ANS )
 The following are constructors for Map :
 1. Map<T1,T2>()
@@ -183,4 +205,134 @@ mymap.put(3,'ijk');
 System.debug(mymap);
 System.debug(mymap.containskey(4));
 Output : false
+------------------------------------------------------------------------------------------------------------------
 
+Q   ) What are statements in Apex ?
+ANS ) The statement in Apex class are usefull for object oriented and logical conditions, to help us understand the programing codes.
+1. What is condional statement in Apex program ?
+EX ) 
+Integer a=20;
+  If (a>10) {
+System.debug('a is greater than 10 or not =' +Yes);
+}
+
+2. If else block statement ?
+EX ) 
+Integer a=2;
+   If (a>10) {
+System.debug('a is greater than 10 and value of a is =' +a);
+}
+Else {
+System.debug('a is smaller than 10 and value of a is =' +a);
+}
+
+3. Else if ?
+EX ) When we have multiple choice question, how to write the code ?
+Let's take ex of Student marksheet.
+Integer marks=90;
+   If (marks > 80) {
+System.debug('A+');
+}
+else if (marks > 60 && marks < =80) {
+System.debug('A');
+}
+else if (marks > 40 && marks < =60) {
+System.debug('B');
+}
+else if (marks > 30 && marks < =40) {
+System.debug('C');
+}
+else  {
+System.debug('Fail');
+}
+
+
+Q   ) What is Loops in Apex programing ?
+ANS ) A peace of code execute repitedly using loop in Apex program are called infinite 
+There are 3 types of loops available in Apex program :
+1. While Loop
+2. Do While
+3. For Loop
+
+1. While Loop ?
+EX ) (1,2,3,4,5,6,7,8,9,10)
+Syntax :
+Integer i=1;
+while (i<=10) {
+System.debug('Value of i is =' +i) ;
+i++ ;
+}
+
+2. Do While ?
+EX ) 
+Integer i=1;
+do {
+System.debug('Value of i is =' +i);
+   i++;
+}
+while (i<0);
+
+3. For Loop ?
+EX ) 
+1) 
+List <integer> lst = new list <integer> {10,20, 30, 60, 100, 200};
+System.debug(lst);
+For (integer i : lst){
+System.debug(i);
+}
+
+2)
+List <string> lst = new list <string> {'a','b', 'c', 'd', 'e', 'f'};
+System.debug(lst);
+For (string i : lst){
+System.debug(i);
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+Q   ) What is Switch statement ?
+ANS ) When we have multiple choises but we have to select only one statement in the real time value
+Syntax :
+Integer i = 2;
+Switch on i {
+when 1{
+   System.debug('i is 1');
+}
+when 2{
+   System.debug('i is 2');
+}
+when 3{
+   System.debug('i is 3');
+}
+when 4{
+   System.debug('i is 4');
+}
+when else {
+  System.debug('defult');
+}
+}
+
+Q ) Can we aply Switch statement in String ?
+ANS )
+Syntax :
+String name = 'India';
+Switch on name {
+when 'USA'{
+   System.debug('The countary name is USA');
+}
+when 'UK'{
+   System.debug('The countary name is UK');
+}
+when 'Russia'{
+   System.debug('The countary name is Russia');
+}
+when 'France'{
+   System.debug('The countary name is France');
+}
+when 'India' {
+  System.debug('The countary name is India');
+}
+when else {
+System.debug('Defult');
+}
+}
